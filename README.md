@@ -26,3 +26,9 @@
 
 ```
 
+---
+### 实物图
+
+
+<img src="https://github.com/lhxone/RaspPi_Guard/blob/master/Image.jpeg" width="100%">
+
