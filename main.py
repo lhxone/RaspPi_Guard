@@ -4,7 +4,7 @@ import urllib.request
 import RPi.GPIO as GPIO
 import base64
 import time
-#百度人脸识别API账号信息
+#Baidu API info Hiden
 APP_ID = '22511984'
 API_KEY = 'EqLIfjjW4I14AhDLTRebqVoF'
 SECRET_KEY = 'HHIpusrNzWoFElGB0UZqQnpqQXBulgOM'
@@ -68,8 +68,7 @@ def transimage():
     return img
 #上传到百度api进行人脸检测
 def go_api(image):
-    result = client.search(str(image, 'utf-8'), IMAGE_TYPE, GROUP);#在百度云人脸库中寻找有没有匹配的人
-脸
+    result = client.search(str(image, 'utf-8'), IMAGE_TYPE, GROUP);#在百度云人脸库中寻找有没有匹配的人脸
     if result['error_msg'] == 'SUCCESS':#如果成功了
         name = result['result']['user_list'][0]['user_id']#获取名字
         score = result['result']['user_list'][0]['score']#获取相似度
